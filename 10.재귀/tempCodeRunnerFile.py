@@ -1,0 +1,1 @@
+"\n".join(append_star(n))

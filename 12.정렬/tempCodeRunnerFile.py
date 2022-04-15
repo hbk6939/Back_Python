@@ -1,0 +1,1 @@
+[str(num_dict[num]) for num in row_arr]
