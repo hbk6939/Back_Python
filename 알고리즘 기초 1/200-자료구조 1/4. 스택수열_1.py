@@ -19,7 +19,7 @@ def my_stack():
         else:
             stack.pop()
             res.append('-')
-        # print(f"num = {num}, cnt = {cnt}\nstack = {stack}\nres = {res}\n")
+        print(f"num = {num}, cnt = {cnt}\nstack = {stack}\nres = {res}\n")
     return '\n'.join(res)
 
 outp(my_stack())
