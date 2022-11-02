@@ -3,11 +3,9 @@ from sys import stdin as si, stdout as so
 # ls = list(map(int, si.readline().split()))
 # so.write(f"{}")
 
-n = int(si.readline())
-res = 1
-while n!=1:
-    res *= n
-    n -= 1
-    # print(f"before*{n}={res}")
+N, M = map(int, si.readline().split())
+ls = list(map(int, si.readline().split()))
 
-print(res)
+ls.sort(reverse=True)
+
+print(ls[M-1])

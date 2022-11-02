@@ -4,10 +4,9 @@ from sys import stdin as si, stdout as so
 # so.write(f"{}")
 
 n = int(si.readline())
-res = 1
-while n!=1:
-    res *= n
-    n -= 1
-    # print(f"before*{n}={res}")
+ls = list(map(int, si.readline().split()))
 
-print(res)
+M = max(ls)
+ls = [(i/M)*100 for i in ls]
+
+print(sum(ls)/len(ls))
