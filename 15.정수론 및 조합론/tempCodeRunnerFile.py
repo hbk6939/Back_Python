@@ -1,1 +1,2 @@
-j
+
+print(' '.join(map(str, arr)))

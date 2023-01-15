@@ -5,17 +5,14 @@ from sys import stdin as si, stdout as so
 
 # nCm 의 끝자리 $0$의 개수를 출력하는 프로그램을 작성하시오.
 n, m = map(int, si.readline().split())
-son = 1; mom = 1
-for i in range(m):
-    son *= n-i
-    mom *= m-i
-res = son//mom
-# print(res)
 
+def x_power_n(n, x):
+    cnt=0
+    while n>0:
+        cnt += n//x
+        n //= x
+    return cnt
 
-def FunctionName(args):
-    return 0
-cnt=0
-while n>0:
-      cnt += n//5
-      n //= 5
+five = x_power_n(n, 5) - x_power_n(n-m, 5) - x_power_n(m, 5)
+two = x_power_n(n, 2) - x_power_n(n-m, 2) - x_power_n(m, 2)
+print(min(five, two))
